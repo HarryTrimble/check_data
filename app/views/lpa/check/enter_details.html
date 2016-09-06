@@ -1,0 +1,74 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/lpa/check/view_permissions" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          Enter details
+        </h1>
+
+        <br>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            Enter details
+          </legend>
+
+          <div class="form-group" id="enter-details">
+            <label class="form-label" for="lpa_number">Lasting power of attorney number</label>
+            <span class="form-hint">For example, 8675 3635 2134</span>
+            <input class="form-control" id="lpa_number" name="lpa_number" type="text">
+          </div>
+
+          <details style="margin-bottom:18px;"> 
+
+            <summary><span class="summary">I don't know this number</span></summary>
+
+            <div class="panel panel-border-narrow">
+
+              <p>
+                If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+              </p>
+
+            </div>
+
+          </details>
+
+          <div class="form-group" id="enter-details">
+            <label class="form-label" for="password">Check code</label>
+            <input class="form-control" id="password" name="password" type="text">
+          </div>
+
+          <details style="margin-bottom:18px;">
+
+            <summary><span class="summary">How do I get a code?</span></summary>
+
+            <div class="panel panel-border-narrow">
+
+              <p>
+                If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+              </p>
+
+            </div>
+
+          </details>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Check" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

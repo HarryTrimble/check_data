@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/lpa/share/get_check_code" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-xlarge">
+          Sign in
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            Sign in
+          </legend>
+
+          <p>Sign in or <a href="https://www.lastingpowerofattorney.service.gov.uk/signup">create an account</a> to get started.</p>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-control" id="email" name="email" type="text">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" id="password" name="password" type="text">
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Sign in" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}
