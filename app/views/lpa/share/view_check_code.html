@@ -13,10 +13,12 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
+      {{formData | safe}}
+
       <div class="share-code-highlight">
         <p>
           Your check code is: <br>
-          <h1 class="heading-xlarge">1A 7Q 5K 8S</h1>
+          <h1 class="heading-xlarge">1A7Q5K8S</h1>
         </p>
 
         <p>This code is valid for 21 days and can only be used once</p>
@@ -25,6 +27,9 @@
           <p class="heading-medium"><a href="#">Print check code</a></p>
 
       </div>
+
+      <!-- value to cancel above share code -->
+      <input type="hidden" name="cancelled" value="yes">    
 
       {% include "includes/share_codes.html" %}
 

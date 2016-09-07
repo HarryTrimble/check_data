@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Confirmation page example
+  Cancel code
 {% endblock %}
 
 {% block content %}
@@ -11,11 +11,13 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
+    {{formData | safe}}
+
       <div class="govuk-box-highlight">
         <h1 class="bold-large">Code cancelled</h1>
         <p>
           The check code you cancelled is <br>
-          <strong class="heading-medium">U8 4F D3 K2</strong>
+          <strong class="heading-medium">U84FD3K2</strong>
         </p>
       </div>
       <p>You can <a href="#">undo</a> cancelling this check code.</p>
